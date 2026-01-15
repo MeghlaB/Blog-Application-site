@@ -34,7 +34,7 @@ export default function RootLayout({
             defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
-          > <Navbar/>
+          > 
             {children}
           </ThemeProvider>
        
