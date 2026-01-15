@@ -1,9 +1,8 @@
-import React from 'react'
+export default async function About() {
+  await new Promise((resolve) => setTimeout(resolve, 4000))
+  throw new Error("Wrong")
 
-function About() {
   return (
-    <div>This is About components</div>
+    <div>This is About component</div>
   )
 }
-
-export default About
