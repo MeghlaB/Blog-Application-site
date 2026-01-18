@@ -1,23 +1,21 @@
 "use client";
 
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import {  Menu } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
 import {
   Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
+  
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
-  NavigationMenuContent,
+
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
+
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
@@ -28,6 +26,7 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggole";
+import Image from "next/image";
 
 interface MenuItem {
   title: string;
@@ -95,9 +94,11 @@ const Navbar = ({
           <div className="flex items-center gap-6">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
-              <img
+              <Image
                 src={logo.src}
                 className="max-h-8 dark:invert"
+                 width={500}
+      height={500}
                 alt={logo.alt}
               />
               <span className="text-lg font-semibold tracking-tighter">
@@ -128,9 +129,11 @@ const Navbar = ({
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
-              <img
+              <Image
                 src={logo.src}
                 className="max-h-8 dark:invert"
+                 width={500}
+      height={500}
                 alt={logo.alt}
               />
             </a>
@@ -144,7 +147,7 @@ const Navbar = ({
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
-                      <img
+                      <Image
                         src={logo.src}
                         className="max-h-8 dark:invert"
                         alt={logo.alt}
