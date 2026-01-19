@@ -24,14 +24,21 @@ export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const handleGoogle= async () => {
-  const data = await authClient.signIn.social({
-    provider: "google",
-    callbackURL:"http://localhost:3000"
-  });
-  console.log(data)
- 
+ "use client";
+
+const handleGoogle = async () => {
+  try {
+    const data = await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "http://localhost:3000",
+    });
+
+    console.log(data);
+  } catch (error) {
+    console.error("Google login failed", error);
+  }
 };
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
